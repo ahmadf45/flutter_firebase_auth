@@ -86,7 +86,7 @@ class AuthService {
       await _firebaseAuth.signInWithCredential(creden);
       return "Berhasil";
     } catch (e) {
-      return "error : " + e;
+      return e.message;
     }
   }
 
